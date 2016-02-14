@@ -1,0 +1,5 @@
+library(reshape)
+scal_dat=read.table('../REALLY_All_Scaled_Data_with_Missing_Vals.txt', head=T, sep="\t")
+scal_dat$Date=as.Date(as.character(scal_dat$Date))
+agg_vars=c("ATRCT","AVBLS","ETRAV","NADDU","NTRAN","NTRBL","NTREP","TOUTV","TRFEE")
+usbtc_dat=data.frame(BTCEx=scal_dat$USD_Scaled_Price)
